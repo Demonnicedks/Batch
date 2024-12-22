@@ -1,10 +1,12 @@
 #(©)Codexbotz
 
-import pyromod.listen
+import pyrogram.utils
 from pyrogram import Client
 import sys
 
 from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCE_SUB_CHANNEL, CHANNEL_ID
+
+pyrogram.utils.MIN_CHANNEL_ID = -1009147483647
 
 class Bot(Client):
     def __init__(self):
